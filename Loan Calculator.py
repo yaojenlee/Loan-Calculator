@@ -34,7 +34,7 @@ def loan_calculator(amount,rate,years): # Function for calculate the loan
                  
     outfile.close()
 
-    printstr='If you had ${:,.2f} in loans at {:,.1f}% and a {:2}-year term, your monthly payments would be ${:,.2f}.\n Over the life of your loan, you would repay a total of ${:,.2f}; interest charges would cause your balance to grow by ${:,.2f}'
+    printstr='If you had ${:,.2f} in loans at {:,.1f}% and a {:2}-year term, your monthly payments would be ${:,.2f}. Over the life of your loan, you would repay a total of ${:,.2f}; interest charges would cause your balance to grow by ${:,.2f}'
 
     
     print('Loan Summary\n')
