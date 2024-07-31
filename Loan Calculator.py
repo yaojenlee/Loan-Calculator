@@ -34,11 +34,17 @@ def loan_calculator(amount,rate,years): # Function for calculate the loan
                  
     outfile.close()
 
-    printstr='If you had ${:,.2f} in loans at {:,.1f}% and a {:2}-year term, your monthly payments would be ${:,.2f}. Over the life of your loan, you would repay a total of ${:,.2f}; interest charges would cause your balance to grow by ${:,.2f}'
-
-    
+    print()
     print('Loan Summary\n')
-    print(printstr.format(amount,rate,years,monthpay,total,grow),'\n')
+    print('If you had ${:,.2f} in loans at {:,.2f}% and a {:2}-year term'.format(amount,rate,years))
+    print('Your monthly payments would be ${:,.2f}'.format(monthpay))
+    print('Over the life of your loan, you would repay a total of ${:,.2f}'.format(total))
+    print('Interest charges would cause your balance to grow by ${:,.2f}'.format(grow),'\n')
     print('To view monthly detail go to_loan_summary.csv')
     return('Thanks for using the loan calculator!')
 
+amount=eval(input('Input your loan amount: '))
+rate=eval(input('Input your loan rate: '))
+year=eval(input('Input your loan year: '))
+
+loan_calculator(amount,rate,year)
